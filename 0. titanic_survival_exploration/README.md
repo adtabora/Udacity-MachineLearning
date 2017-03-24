@@ -1,6 +1,17 @@
 # Project 0: Introduction and Fundamentals
 ## Titanic Survival Exploration
 
+This project was an introduction to machine learning were the task was to explore the Titanic survival in order to develop a hardcoded algorithm that predicts whether a passenger survived or not. In essence the project was about visually exploring the data and coming up with some personal conclusions and decisions which were later coded into the algorithm. This process is basically a mimic of how a Decision Tree algorithm would train and the resulting algorithm is the model itself.
+
+I must note that part of the code was already supplied by Udacity but the analysis, the answers to the questions and the prediction algorithm was developed by me.  
+
+Below are the original source of the project:
+
+### Sources
+
+- Udacity Project:  https://github.com/udacity/machine-learning/tree/master/projects/titanic_survival_exploration
+
+
 ### Install
 
 This project requires **Python 2.7** and the following Python libraries installed:
