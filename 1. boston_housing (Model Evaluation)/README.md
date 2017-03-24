@@ -1,6 +1,18 @@
 # Project 1: Model Evaluation & Validation
 ## Predicting Boston Housing Prices
 
+This project is about generating a simple regression model to predict house prices in Boston and evaluate its predictive accuracy. The main focus of the project was to understand how to evaluate the performance and accuracy of a model. The concept of learning curves, bias and variance were explored and used to optimize the model.
+
+### View the Project
+
+To view the project open the [jupyter notebook](https://github.com/adtabora/Udacity-MachineLearning/blob/master/1.%20boston_housing%20(Model%20Evaluation)/boston_housing.ipynb)
+
+### Sources
+
+The original uncompleted project can be found on the following git repository:
+
+- [Udacity Repository](https://github.com/udacity/machine-learning/tree/master/projects/boston_housing)
+
 ### Install
 
 This project requires **Python 2.7** and the following Python libraries installed:

@@ -1,6 +1,19 @@
 # Content: Unsupervised Learning
 ## Project: Creating Customer Segments
 
+This project is about using unsupervised learning algorithms and techniques in order to find the main customer segments for a wholesale company that wants to implement an A/B testing process. The project focuses greatly on data exploration and preparation ( applying data transformations and outlier handling ). PCA was applied in order to reduce dimensionality and be able to visualize how the clustering algorithm classified the dataset. Finally a clustering algorithm (Gaussian Mixture Model) was used to generate the clusters that represent the main customer segments. 
+
+### View the Project
+
+To view the project open the [jupyter notebook](https://github.com/adtabora/Udacity-MachineLearning/blob/master/3.%20customer_segments%20(Unsupervised%20Learning)/customer_segments.ipynb) 
+
+### Sources
+
+The original uncompleted project can be found on the following git repository:
+
+- [Udacity Repository](https://github.com/udacity/machine-learning/tree/master/projects/customer_segments)
+
+
 ### Install
 
 This project requires **Python 2.7** and the following Python libraries installed:

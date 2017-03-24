@@ -2,6 +2,19 @@
 # Supervised Learning
 ## Project: Building a Student Intervention System
 
+This project was about building a model that would identify students that might need intervention so that they don't fail to graduate. The main focus of the project was to select and tune an appropiate ML algorithm to generate the model. I had the liberty to choose 3 algorithms given that I gave the appropiate reasons to select them. Those algorithms were rapidly tested in order to select and tune the final one.
+
+### View the Project
+
+To view the project open the [jupyter notebook](https://github.com/adtabora/Udacity-MachineLearning/blob/master/2.%20student_intervention%20(Supervised%20Learning)/student_intervention.ipynb) 
+
+### Sources
+
+The original uncompleted project can be found on the following git repository:
+
+- [Udacity Repository](https://github.com/udacity/machine-learning/tree/master/projects/student_intervention)
+
+
 ### Install
 
 This project requires **Python 2.7** and the following Python libraries installed:

@@ -11,6 +11,8 @@ To view the project open the [jupyter notebook](https://github.com/adtabora/Udac
 
 ### Sources
 
+The original uncompleted project can be found on the following git repository:
+
 - [Udacity Repository](https://github.com/udacity/machine-learning/tree/master/projects/titanic_survival_exploration)
 
 
