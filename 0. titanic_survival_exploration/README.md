@@ -5,11 +5,13 @@ This project was an introduction to machine learning were the task was to explor
 
 I must note that part of the code was already supplied by Udacity but the analysis, the answers to the questions and the prediction algorithm was developed by me.  
 
-Below are the original source of the project:
+### View the Project
+
+To view the project open the [jupyter notebook](https://github.com/adtabora/Udacity-MachineLearning/blob/master/0.%20titanic_survival_exploration/Titanic_Survival_Exploration.ipynb) 
 
 ### Sources
 
-- Udacity Project:  https://github.com/udacity/machine-learning/tree/master/projects/titanic_survival_exploration
+- [Udacity Repository](https://github.com/udacity/machine-learning/tree/master/projects/titanic_survival_exploration)
 
 
 ### Install
