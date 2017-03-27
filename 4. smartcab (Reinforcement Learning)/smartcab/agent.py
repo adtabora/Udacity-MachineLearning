@@ -39,6 +39,12 @@ class LearningAgent(Agent):
         # Update epsilon using a decay function of your choice
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
+        if testing:
+            self.epsilon =0.0
+            self.alpha = 0.0
+        else:
+            self.epsilon = self.epsilon - 0.05
+
 
         return None
 
@@ -56,12 +62,12 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Set 'state' as a tuple of relevant data for the agent        
-        state = None
+        state = (waypoint,inputs["light"], inputs["left"], inputs["oncoming"])
 
         return state
 
 
-    def get_maxQ(self, state):
+    def get_max_Q(self, state):
         """ The get_max_Q function is called when the agent is asked to find the
             maximum Q-value of all actions based on the 'state' the smartcab is in. """
 
@@ -69,10 +75,14 @@ class LearningAgent(Agent):
         ## TO DO ##
         ###########
         # Calculate the maximum Q-value of all actions for a given state
+        maxQ = 0.0
+        maxQ_action = None
+        for action in self.Q[state]:
+            if self.Q[state][action] > maxQ:
+                maxQ = self.Q[state][action]
+                maxQ_action = action
 
-        maxQ = None
-
-        return maxQ 
+        return maxQ_action
 
 
     def createQ(self, state):
@@ -84,7 +94,11 @@ class LearningAgent(Agent):
         # When learning, check if the 'state' is not in the Q-table
         # If it is not, create a new dictionary for that state
         #   Then, for each action available, set the initial Q-value to 0.0
-
+        if state not in self.Q:
+            self.Q[state] = {}
+            for action in self.valid_actions:
+                self.Q[state][action] = 0.0  
+    
         return
 
 
@@ -104,7 +118,13 @@ class LearningAgent(Agent):
         # When learning, choose a random action with 'epsilon' probability
         #   Otherwise, choose an action with the highest Q-value for the current state
         if self.learning:
-            action = None
+            #decide wether to explore or exploit based on epsilon factor
+
+            explore = True if random.random() <= self.epsilon else False
+            if explore:
+                action = random.choice(self.valid_actions)
+            else:
+                action = self.get_max_Q(state)
         else:
             action = random.choice(self.valid_actions)
  
@@ -121,6 +141,12 @@ class LearningAgent(Agent):
         ###########
         # When learning, implement the value iteration update rule
         #   Use only the learning rate 'alpha' (do not use the discount factor 'gamma')
+
+        #variables to make easier readiability
+        Qn_1 = self.Q[state][action]    #Qn-1
+        alpha = self.alpha              #alpha
+
+        self.Q[state][action] = ((1-alpha) * Qn_1) + (alpha * reward )
 
         return
 
@@ -157,7 +183,7 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent)
+    agent = env.create_agent(LearningAgent,learning=True)
     
     ##############
     # Follow the driving agent
